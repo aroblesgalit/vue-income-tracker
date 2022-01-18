@@ -1,7 +1,16 @@
-<template> Hello</template>
+<template>
+  <Header />
+</template>
 
 <script>
-export default {}
+import Header from './components/Header'
+
+export default {
+  name: 'App',
+  components: {
+    Header
+  }
+}
 </script>
 
 <style>
