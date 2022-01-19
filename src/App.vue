@@ -9,6 +9,11 @@ export default {
   name: 'App',
   components: {
     Header
+  },
+  data () {
+    return {
+      income: []
+    }
   }
 }
 </script>
