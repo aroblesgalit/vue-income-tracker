@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header :totalIncome="totalIncome" />
 </template>
 
 <script>
