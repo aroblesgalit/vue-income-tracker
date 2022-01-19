@@ -14,6 +14,17 @@ export default {
     return {
       income: []
     }
+  },
+  computed: {
+    totalIncome () {
+      let temp = 0
+      if (this.income.length > 0) {
+        for (let i = 0; i < this.income.length; i++) {
+          temp += this.income[i].value
+        }
+      }
+      return temp
+    }
   }
 }
 </script>
