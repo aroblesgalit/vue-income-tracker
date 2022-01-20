@@ -1,14 +1,17 @@
 <template>
   <Header :totalIncome="totalIncome" />
+  <Form />
 </template>
 
 <script>
 import Header from './components/Header'
+import Form from './components/Form'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Form
   },
   data () {
     return {
