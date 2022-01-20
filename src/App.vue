@@ -1,6 +1,6 @@
 <template>
   <Header :totalIncome="totalIncome" />
-  <Form />
+  <Form @add-income="addIncome" />
 </template>
 
 <script>
@@ -16,6 +16,11 @@ export default {
   data () {
     return {
       income: []
+    }
+  },
+  methods: {
+    addIncome (income) {
+      this.income = [...this.income, income]
     }
   },
   computed: {
