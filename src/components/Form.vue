@@ -1,15 +1,46 @@
 <template>
-  <form>
-    <input type="text" placeholder="Description..." />
-    <input type="number" placeholder="Value..." />
-    <input type="date" placeholder="Date..." />
+  <form @submit.prevent="FormHandler">
+    <input type="text" placeholder="Description..." v-model="desc" />
+    <input type="number" placeholder="Value..." v-model="value" />
+    <input type="date" placeholder="Date..." v-model="date" />
     <input type="submit" value="SUBMIT" />
   </form>
 </template>
 
 <script>
 export default {
-  name: 'Form'
+  name: 'Form',
+  props: {
+    state: Object
+  },
+  data () {
+    return {
+      desc: '',
+      value: 0,
+      date: null
+    }
+  },
+  methods: {
+    FormHandler () {
+      if (!this.desc || !this.date) {
+        alert('Please fill in empty field.')
+        return
+      }
+
+      const newIncome = {
+        desc: this.desc,
+        value: this.value,
+        date: this.date
+      }
+
+      this.$emit('add-income', newIncome)
+
+      this.desc = ''
+      this.value = 0
+      this.date = null
+    }
+  }
+  //   emits: [desc, value, date]
 }
 </script>
 
