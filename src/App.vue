@@ -1,7 +1,7 @@
 <template>
   <Header :totalIncome="totalIncome" />
   <Form @add-income="addIncome" />
-  <IncomeList />
+  <IncomeList :income="income" />
 </template>
 
 <script>
