@@ -1,6 +1,6 @@
 <template>
   <div class="income-list">
-    <IncomeItem />
+    <IncomeItem v-for="item in income" :key="item.id" :income="item" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     IncomeItem
   },
   props: {
-    state: Object
+    income: Object
   }
 }
 </script>
