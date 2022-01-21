@@ -35,6 +35,11 @@ export default {
         }
       }
       return temp
+    },
+    sortedIncome () {
+      return [...this.income].sort(function (a, b) {
+        return b.date - a.date
+      })
     }
   }
 }

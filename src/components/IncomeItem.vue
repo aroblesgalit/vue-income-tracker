@@ -14,7 +14,7 @@ export default {
     income: Object
   },
   computed: {
-    formattedDate: function () {
+    formattedDate () {
       let date = new Date(this.income.date)
       let month = date.getMonth()
       let day = date.getDate()
