@@ -15,8 +15,8 @@ export default {
   },
   data () {
     return {
-      desc: '',
-      value: 0,
+      desc: null,
+      value: null,
       date: null
     }
   },
@@ -35,8 +35,8 @@ export default {
 
       this.$emit('add-income', newIncome)
 
-      this.desc = ''
-      this.value = 0
+      this.desc = null
+      this.value = null
       this.date = null
     }
   }
