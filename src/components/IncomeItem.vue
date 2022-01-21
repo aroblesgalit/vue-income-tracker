@@ -3,7 +3,7 @@
     <div class="removeItem">x</div>
     <div class="desc">{{ income.desc }}</div>
     <div class="price">${{ income.value }}</div>
-    <div class="date">{{ income.date }}</div>
+    <div class="date">{{ formattedDate }}</div>
   </div>
 </template>
 
@@ -12,6 +12,16 @@ export default {
   name: 'IncomeItem',
   props: {
     income: Object
+  },
+  computed: {
+    formattedDate: function () {
+      let date = new Date(this.income.date)
+      let month = date.getMonth()
+      let day = date.getDate()
+      let year = date.getFullYear()
+
+      return month + '/' + day + '/' + year
+    }
   }
 }
 </script>
