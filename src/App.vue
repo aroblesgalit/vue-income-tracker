@@ -21,6 +21,7 @@ export default {
   methods: {
     addIncome (income) {
       this.income = [...this.income, income]
+      console.log(income)
     }
   },
   computed: {

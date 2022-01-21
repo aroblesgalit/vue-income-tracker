@@ -28,6 +28,7 @@ export default {
       }
 
       const newIncome = {
+        id: Date.now(),
         desc: this.desc,
         value: this.value,
         date: this.date
