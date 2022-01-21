@@ -27,11 +27,14 @@ export default {
         return
       }
 
+      let d = this.date.split('-')
+      let newD = new Date(d[0], d[1], d[2])
+
       const newIncome = {
         id: Date.now(),
         desc: this.desc,
         value: this.value,
-        date: this.date
+        date: newD.getTime()
       }
 
       this.$emit('add-income', newIncome)
