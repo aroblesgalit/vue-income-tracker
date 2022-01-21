@@ -1,17 +1,20 @@
 <template>
   <Header :totalIncome="totalIncome" />
   <Form @add-income="addIncome" />
+  <IncomeList />
 </template>
 
 <script>
 import Header from './components/Header'
 import Form from './components/Form'
+import IncomeList from './components/IncomeList'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Form
+    Form,
+    IncomeList
   },
   data () {
     return {
